@@ -11,8 +11,8 @@ class  CreateRoom extends Component {
         super(props);
         this.state = {
             
-                selectedDish: null
-            
+                selectedDish: null,
+                name:null
                  
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -32,8 +32,8 @@ class  CreateRoom extends Component {
     }
 
     handleSubmit(event) {
-        console.log('Current State is: ' + JSON.stringify(this.state));
-        alert('Current State is: ' + JSON.stringify(this.state));
+        console.log('Current State is: ' + JSON.stringify(this.state.name));
+        alert('Current State is: ' + JSON.stringify(this.state.name));
         event.preventDefault();
     }
     renderDish(dish) {
