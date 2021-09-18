@@ -1,26 +1,21 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import CreateRoom from "./Pages/CreateRoom";
-import { Navbar, NavbarBrand } from "reactstrap";
-import React, { Component } from "react";
-import { DISHES } from "./Pages/CreateRoom/dishes";
+import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Main from './Pages/CreateRoom/Main'
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dishes: DISHES,
-    };
+    
   }
   render() {
     return (
-      <div className="App">
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">ChatApp</NavbarBrand>
-          </div>
-        </Navbar>
-        <CreateRoom dishes={this.state.dishes} />
-      </div>
+      
+       <div className="App">
+       <Main />
+     </div>
+      
+     
     );
   }
 }
