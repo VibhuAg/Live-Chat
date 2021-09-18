@@ -24,6 +24,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+var io = require('socket.io')(server) // binding socket.io to server object
 var chatRoomData = []
 var connectedClients = {}
 
