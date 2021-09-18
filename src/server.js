@@ -12,6 +12,8 @@ const {
 } = require("unique-names-generator");
 const { isObject } = require("util");
 
+const Sequelize = require("sequelize-cockroachdb");
+
 // Running our server on port 3080
 var PORT = process.env.PORT || 3080;
 
