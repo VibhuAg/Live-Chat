@@ -1,8 +1,9 @@
 
 import "./App.css";
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+
 import Main from './Pages/CreateRoom/Main'
+import { BrowserRouter } from 'react-router-dom';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -10,10 +11,11 @@ class App extends Component {
   }
   render() {
     return (
-      
-       <div className="App">
+      <BrowserRouter>
+      <div className="App">
        <Main />
-     </div>
+     </div></BrowserRouter>
+       
       
      
     );

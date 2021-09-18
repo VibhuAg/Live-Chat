@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import {DISHES} from './dishes';
 import {Questions} from './questions';
 import QA from './QAform';
+import { Switch, Route, Redirect } from 'react-router-dom';
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,9 @@ class Main extends Component {
   {
     this.setState({ selectedQA: dishId});
   }
+
   render() {
+    
     return (
       
        <div className="App">
@@ -31,8 +34,14 @@ class Main extends Component {
             <NavbarBrand href="/">ChatApp</NavbarBrand>
           </div>
         </Navbar>
-        <CreateRoom dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
-        <QA dishes = {this.state.dishes1}  onClick={(dishId) => this.onQASelect(dishId)}/>
+        <Switch>
+        <Route exact path='/' component={() => <CreateRoom dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />} />
+        <Route path="/page2" component={() => <QA dishes = {this.state.dishes1}  onClick={(dishId) => this.onQASelect(dishId)}/>} />
+        <Redirect to="/" />
+        </Switch>
+        
+        
+
       </div>
       
      

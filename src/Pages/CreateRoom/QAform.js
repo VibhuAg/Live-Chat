@@ -66,15 +66,23 @@ class  QA extends Component {
     render() {
         const menu = this.props.dishes.map((im) => {
             return (
-                <div  className="col-6">
-                <Card key={im.id}
+                <div className = "row row-content">
+                    <div  className="col-6">
+                <Card key={im.id} style={{width:"200px", height:"200px"}}
                   onClick={() => this.onDishSelect(im)}>
                   <CardImg width="100%" src={im.image} alt={im.id} />
                   <CardImgOverlay>
                       <CardTitle>{im.id}</CardTitle>
                   </CardImgOverlay>
                 </Card>
+                
               </div>
+               <div className = "col-6">
+                   {this.renderDish(this.state.selectedDish)}
+              </div>
+                </div>
+                
+              
             );
         });
 
@@ -83,12 +91,9 @@ class  QA extends Component {
             <div className="row">
                 {menu}
             </div>
-            <div className="row">
-              <div  className="col-12 col-md-5 m-1">
-                {this.renderDish(this.state.selectedDish)}
-              </div>
+            
             </div>
-        </div>
+       
         );
     }
 }
