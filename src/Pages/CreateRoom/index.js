@@ -91,7 +91,7 @@ class  CreateRoom extends Component {
         return (
             <Jumbotron>
                 <div className="container">
-            <div className="row row-header">
+            <div className="row row-header justify-content-center">
                 {menu}
             </div>
             <div className=" row row-header justify-content-center">

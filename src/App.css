@@ -22,12 +22,19 @@
   padding: 50px 0px 50px 0px;
   border-bottom: 1px ridge;
   min-height:400px;
+  background-color: #FFFF99;
 }
 
 .footer{
   background-color: #D1C4E9;
   margin:0px auto;
   padding: 20px 0px 20px 0px;
+}
+.jumbotron {
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+  background:#ADD8E6 ;
+ 
 }
 .App-header {
   background-color: #282c34;
