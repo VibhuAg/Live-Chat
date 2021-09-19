@@ -32,8 +32,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "nodemon --exec npm run babel-node --  ./bin/www",
-    "babel-node": "babel-node",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
