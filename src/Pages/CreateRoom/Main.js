@@ -6,6 +6,7 @@ import {DISHES} from './dishes';
 import {Questions} from './questions';
 import QA from './QAform';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import Footer from './footer';
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -39,7 +40,7 @@ class Main extends Component {
         <Route path="/page2" component={() => <QA dishes = {this.state.dishes1}  onClick={(dishId) => this.onQASelect(dishId)}/>} />
         <Redirect to="/" />
         </Switch>
-        
+        <Footer/>
         
 
       </div>

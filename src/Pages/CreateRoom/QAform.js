@@ -5,19 +5,23 @@ import { Card, CardImg, CardText, CardBody,
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
      Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label ,Button} from 'reactstrap';
+import {DUMMY_DATA} from './DUMMY';
+import MessageList from './messagelist';
 
 class  QA extends Component {
     constructor(props) {
         super(props);
+    
         this.state = {
             
                 selectedDish: null,
-                name:null
-                 
+                name:null,
+                messages: DUMMY_DATA
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+    
     onDishSelect(dish) {
         this.setState({ selectedDish: dish});
     }
@@ -91,7 +95,9 @@ class  QA extends Component {
             <div className="row">
                 {menu}
             </div>
-            
+            <div className = "row row-content">
+            <MessageList messages={this.state.messages}/>
+            </div>
             </div>
        
         );

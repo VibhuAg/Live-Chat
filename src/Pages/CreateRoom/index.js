@@ -89,16 +89,22 @@ class  CreateRoom extends Component {
         });
 
         return (
-            <div className="container">
+            <Jumbotron>
+                <div className="container">
             <div className="row row-header">
                 {menu}
             </div>
-            <div className="row-header">
+            <div className=" row row-header justify-content-center">
               <div  className="col-12 col-md-5 m-1">
+                
                 {this.renderDish(this.state.selectedDish)}
+                
+                
               </div>
             </div>
         </div>
+            </Jumbotron>
+            
         );
     }
 }
