@@ -8,6 +8,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 import {DUMMY_DATA} from './DUMMY';
 import MessageList from './messagelist';
 import SendMessageForm from './message'
+import {Answers} from './answers'
 class  QA extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +17,7 @@ class  QA extends Component {
             
                 selectedDish: null,
                 name:null,
-                messages: DUMMY_DATA
+                messages: Answers
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -52,8 +53,16 @@ class  QA extends Component {
                       <Form onSubmit={this.handleLogin}>
                             <FormGroup>
                                 <Label htmlFor="username">Answers to the question as follows:</Label>
+                                
                                 <Input type="text" id="username" name="username"
                                     innerRef={(input) => this.username = input} />
+                                 <Col md={{size: 10, offset: 1}}>
+                                
+                                    <Button type="submit" color="primary">
+                                        Submit Message
+                                    </Button>
+                                    
+                                </Col>
                             </FormGroup>
                            
                             </Form>
