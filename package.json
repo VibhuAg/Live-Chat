@@ -3,14 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.1.0",
+<<<<<<< HEAD
     "bootstrap-social": "^5.1.1",
+=======
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+>>>>>>> 789ace37c6cf9829a53b3ef19314a015ebffffb0
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "nodejs": "0.0.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.6",
     "react-dom": "^17.0.2",
@@ -18,12 +29,16 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "4.0.3",
     "reactstrap": "^5.0.0",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0",
     "socket.io": "^4.2.0",
     "socket.io-client": "^4.2.0",
+    "socket.io-sequelize": "^1.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nodemon --exec npm run babel-node --  ./bin/www",
+    "babel-node": "babel-node",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
