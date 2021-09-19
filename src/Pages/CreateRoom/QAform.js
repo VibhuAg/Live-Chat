@@ -7,7 +7,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
     Form, FormGroup, Input, Label ,Button} from 'reactstrap';
 import {DUMMY_DATA} from './DUMMY';
 import MessageList from './messagelist';
-
+import SendMessageForm from './message'
 class  QA extends Component {
     constructor(props) {
         super(props);
@@ -95,8 +95,8 @@ class  QA extends Component {
             <div className="row">
                 {menu}
             </div>
-            <div className = "row row-content">
-            <MessageList messages={this.state.messages}/>
+            <div className = "row">
+            <SendMessageForm/>
             </div>
             </div>
        

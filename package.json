@@ -11,12 +11,9 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.1.0",
-<<<<<<< HEAD
     "bootstrap-social": "^5.1.1",
-=======
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
->>>>>>> 789ace37c6cf9829a53b3ef19314a015ebffffb0
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "nodejs": "0.0.0",
