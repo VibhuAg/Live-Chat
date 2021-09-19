@@ -12,8 +12,6 @@ const {
 } = require("unique-names-generator");
 const { isObject } = require("util");
 
-const Sequelize = require("sequelize-cockroachdb");
-
 // Running our server on port 3080
 var PORT = process.env.PORT || 3080;
 
@@ -24,6 +22,7 @@ var server = app.listen(PORT, () => {
 });
 
 app.use(express.json()); //Used to parse JSON bodies
+app.use(express.urlencoded());
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
