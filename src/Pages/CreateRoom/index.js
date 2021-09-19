@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Media } from 'reactstrap';
+import {Link} from 'react-router-dom';
 import { Card, CardImg, CardText, CardBody,
+
     CardTitle, CardSubtitle,CardImgOverlay,Col} from 'reactstrap';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
      Modal, ModalHeader, ModalBody,
@@ -53,9 +55,11 @@ class  CreateRoom extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={{size: 10, offset: 2}}>
+                                <Link to="/page2">
                                     <Button type="submit" color="primary">
                                         Create Room
                                     </Button>
+                                    </Link>
                                 </Col>
                             </FormGroup>
                             </Form>
@@ -86,10 +90,10 @@ class  CreateRoom extends Component {
 
         return (
             <div className="container">
-            <div className="row">
+            <div className="row row-header">
                 {menu}
             </div>
-            <div className="row">
+            <div className="row-header">
               <div  className="col-12 col-md-5 m-1">
                 {this.renderDish(this.state.selectedDish)}
               </div>
